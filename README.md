@@ -130,6 +130,48 @@ LANDLORD  ──1:M──►  PROPERTY  ◄──FK──  INSPECTION
 - When a payment is recorded → the system auto-calculates whether it is Paid, Partial, or Overdue based on the amount vs. the lease's monthly rent
 
 ---
+## How to Run
+
+1. Create a free Oracle APEX workspace at [apex.oracle.com](https://apex.oracle.com)
+2. Navigate to **SQL Workshop → SQL Scripts**
+3. Upload and run the database scripts in order: `01_tables_creation.sql` → `02_data_insertion.sql` → `03_views.sql` → `04_stored_procedures.sql`
+4. Go to **App Builder → Import** and upload `apex/f195840.sql`
+5. Open the application and log in
+
+---
+
+## Result
+
+The completed system provides a fully functional property management application with:
+
+- **8 normalized tables** with 30+ constraints ensuring data integrity at the database level
+- **10 triggers** automating key business rules - no manual status updates required
+- **6 views** pre-joining tables for instant reporting with zero extra SQL in the front end
+- **7 stored procedures** encapsulating reusable business logic
+- **20 APEX pages** - 9 interactive reports, 6 data entry forms, a universal search engine, a live dashboard, and an analytics page with charts
+- **17 properties, 12 tenants, and 11 active leases** in sample data designed to cover every report scenario (mixed Paid/Overdue/Partial payments, Open/Resolved maintenance, Active/Expired leases)
+
+The project demonstrates end-to-end database application development - from ER modeling and schema design through SQL/PL/SQL implementation to a fully deployed web interface.
+
+---
+
+## Limitations & Future Enhancements
+
+**Current limitations:**
+- No role-based authentication - all users see all data
+- No automated email alerts for overdue payments
+- No PDF upload for lease document storage
+- No concurrent access control for multi-user editing
+
+---
+
+
+
+**Planned enhancements:**
+- Role-based login with separate landlord, staff, and admin views
+- Automated overdue payment email notifications
+- Tenant self-service portal for submitting maintenance requests
+- Integration with payment gateways (Stripe, etc.)
 
 ## Screenshots
 
@@ -170,43 +212,4 @@ LANDLORD  ──1:M──►  PROPERTY  ◄──FK──  INSPECTION
 
 
 
----
 
-## How to Run
-
-1. Create a free Oracle APEX workspace at [apex.oracle.com](https://apex.oracle.com)
-2. Navigate to **SQL Workshop → SQL Scripts**
-3. Upload and run the database scripts in order: `01_tables_creation.sql` → `02_data_insertion.sql` → `03_views.sql` → `04_stored_procedures.sql`
-4. Go to **App Builder → Import** and upload `apex/f195840.sql`
-5. Open the application and log in
-
----
-
-## Result
-
-The completed system provides a fully functional property management application with:
-
-- **8 normalized tables** with 30+ constraints ensuring data integrity at the database level
-- **10 triggers** automating key business rules - no manual status updates required
-- **6 views** pre-joining tables for instant reporting with zero extra SQL in the front end
-- **7 stored procedures** encapsulating reusable business logic
-- **20 APEX pages** - 9 interactive reports, 6 data entry forms, a universal search engine, a live dashboard, and an analytics page with charts
-- **17 properties, 12 tenants, and 11 active leases** in sample data designed to cover every report scenario (mixed Paid/Overdue/Partial payments, Open/Resolved maintenance, Active/Expired leases)
-
-The project demonstrates end-to-end database application development - from ER modeling and schema design through SQL/PL/SQL implementation to a fully deployed web interface.
-
----
-
-## Limitations & Future Enhancements
-
-**Current limitations:**
-- No role-based authentication - all users see all data
-- No automated email alerts for overdue payments
-- No PDF upload for lease document storage
-- No concurrent access control for multi-user editing
-
-**Planned enhancements:**
-- Role-based login with separate landlord, staff, and admin views
-- Automated overdue payment email notifications
-- Tenant self-service portal for submitting maintenance requests
-- Integration with payment gateways (Stripe, etc.)
