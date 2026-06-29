@@ -133,28 +133,42 @@ LANDLORD  ──1:M──►  PROPERTY  ◄──FK──  INSPECTION
 
 ## Screenshots
 
-> *Add screenshots to the `screenshots/` folder and they will render below.*
 
+### ER Diagram
+![ERD](screenshots/erd_diagram.png)
+
+---
 ### Home Page & Dashboard
 ![Home Page](screenshots/home_dashboard.png)
 ![Home Dashboard](screenshots/prms_dashboard.png)
 
+---
 ### Property Listing Report
 ![Property Listing](screenshots/property_listing.png)
 
+---
+
 ### Payment and Property Form (Smart Dropdowns)
 ![Payment Form](screenshots/payment_form.png)
+
+
 ![Property Form](screenshots/property_form.png)
+
+---
 
 ### Universal Search Engine
 ![Search Engine](screenshots/search_engine.png)
+
+
 ![Search Engine_2](screenshots/search_engine2.png)
 
+---
 ### Tenant Directory
 ![Overdue Payments](screenshots/tenant_directory.png)
 
-### ER Diagram
-![ERD](screenshots/erd_diagram.png)
+---
+
+
 
 ---
 
